@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Números Pares</title>
+</head>
+<body>
+  <h2>Generar números pares positivos menores que el número ingresado</h2>
+  <input type="number" id="numero" placeholder="Introduce un número" />
+  <button onclick="mostrarPares()">Mostrar pares</button>
+
+  <script>
+    function mostrarPares() {
+      const input = document.getElementById("numero").value;
+      const limite = parseInt(input);
+
+      if (isNaN(limite) || limite <= 0) {
+        alert("Por favor, introduce un número entero positivo mayor que 0.");
+        return;
+      }
+
+      let resultado = "";
+
+      for (let i = 2; i < limite; i += 2) {
+        resultado += i + "\n";
+      }
+
+      if (resultado === "") {
+        alert("No hay números pares positivos menores que " + limite);
+      } else {
+        alert("Números pares menores que " + limite + ":\n\n" + resultado);
+      }
+    }
+  </script>
+</body>
+</html>
