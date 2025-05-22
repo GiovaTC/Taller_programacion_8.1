@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuenta Atrás</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cuenta Atrás desde un Número</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número entero" />
+    <br>
+    <button onclick="cuentaAtras()">Mostrar Cuenta Atrás</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function cuentaAtras() {
+      const input = document.getElementById("numero").value;
+      const resultado = document.getElementById("resultado");
+      const numero = parseInt(input);
+
+      if (isNaN(numero) || numero < 0) {
+        resultado.innerHTML = "Por favor, ingresa un número entero mayor o igual a 0.";
+        return;
+      }
+
+      let salida = "";
+      for (let i = numero; i >= 0; i--) {
+        salida += i + (i !== 0 ? ", " : "");
+      }
+
+      resultado.innerHTML = salida;
+    }
+  </script>
+</body>
+</html>
