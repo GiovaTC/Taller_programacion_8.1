@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Media de 4 Números</title>
+</head>
+<body>
+  <h2>Calcular la media de 4 números</h2>
+  <button onclick="calcularMedia()">Ingresar números</button>
+
+  <script>
+    function calcularMedia() {
+      let suma = 0;
+
+      for (let i = 1; i <= 4; i++) {
+        let numero = parseFloat(prompt(`Introduce el número ${i}:`));
+
+        while (isNaN(numero)) {
+          numero = parseFloat(prompt(`❗ Eso no es un número. Introduce de nuevo el número ${i}:`));
+        }
+
+        suma += numero;
+      }
+
+      let media = suma / 4;
+      alert("La media de los 4 números es: " + media);
+    }
+  </script>
+</body>
+</html>
