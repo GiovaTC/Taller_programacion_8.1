@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Triángulo de Asteriscos</title>
+</head>
+<body>
+  <h2>Dibujar un triángulo con asteriscos</h2>
+  <input type="number" id="numero" placeholder="Introduce un número entero positivo" />
+  <button onclick="dibujarTriangulo()">Dibujar Triángulo</button>
+
+  <script>
+    function dibujarTriangulo() {
+      const valor = parseInt(document.getElementById("numero").value);
+
+      if (isNaN(valor) || valor <= 0) {
+        alert("Por favor, introduce un número entero positivo.");
+        return;
+      }
+
+      let resultado = "";
+
+      for (let i = 1; i <= valor; i++) {
+        resultado += "*".repeat(i) + "\n";
+      }
+
+      alert("Triángulo de asteriscos:\n\n" + resultado);
+    }
+  </script>
+</body>
+</html>
