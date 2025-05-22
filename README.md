@@ -10,5 +10,9 @@
 # Taller_programacion_8.2_Ejercicio4
 ![image](https://github.com/user-attachments/assets/87589449-2af1-498b-b742-035725c92c6d)
 
+# Taller_programacion_8.2_Ejercicio5
+![image](https://github.com/user-attachments/assets/0b3a87da-4c19-4701-b113-4166273441fa)
+
+
 
 
